@@ -38,7 +38,7 @@ RUN apk update \
 
 ENV PATH="/home/pongo/.local/bin:${PATH}"
 
-RUN pip install --user httpie
+RUN pip install --user httpie >/dev/null 2>&1
 
 USER root
 
