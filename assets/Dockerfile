@@ -36,7 +36,7 @@ RUN apk update \
     && apk add zip unzip make g++ py-pip jq git bsd-compat-headers m4 openssl-dev curl wget python3-dev \
     && curl -k -s -S -L https://github.com/fullstorydev/grpcurl/releases/download/v1.7.0/grpcurl_1.7.0_linux_x86_64.tar.gz | tar xz -C /kong/bin
 
-RUN pip install httpie
+RUN pip install --user httpie
 
 USER root
 
